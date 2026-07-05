@@ -1,23 +1,20 @@
-responses = {
-    "hello": "Hello! How can I help you?",
-    "hii" : "Hii! Nice to meet you.",
-    "hola amigo" :"Hola, ¿cómo estás?",
-    "नमस्ते" : "नमस्ते, आपसे मिलकर अच्छा लगा।",
-    "Nǐ hǎo" :"嘿，嗨，你好嗎？",
-    "hi": "Hi! Nice to meet you.",
-    "how are you": "I am fine. Thank you!",
-    "name": "My name is AI Bot.",
-    "help": "I can answer simple questions.",
-    "bye": "Goodbye! Have a nice day.",
+"""
+Project 1: Rule-Based AI Chatbot
+Author: Abhinav Soni
+Internship: DecodeLabs AI Internship 2026
+"""
 
-    # English
-    "hello": "Hello! How can I help you?",
-    "hi": "Hello! How can I help you?",
-    "hey": "Hello! How can I help you?",
+# Predefined chatbot responses
+responses = {
+
+    # English Greetings
+    "hello": "Hello! How can I help you today?",
+    "hi": "Hi! Nice to meet you.",
+    "hey": "Hey! How can I help you?",
 
     # Hindi
     "namaste": "Namaste! Aap kaise hain?",
-    "namaskar": "Namaste! Aap kaise hain?",
+    "नमस्ते": "नमस्ते! आप कैसे हैं?",
 
     # Urdu
     "assalamualaikum": "Wa Alaikum Assalam!",
@@ -61,27 +58,54 @@ responses = {
     # Bengali
     "nomoskar": "Nomoskar!",
 
-    # Other intents
-    "how are you": "I am fine. Thank you!",
+    # General Questions
+    "how are you": "I'm doing great. Thanks for asking!",
     "name": "My name is RuleBot.",
-    "help": "I can answer predefined questions.",
-    "bye": "Goodbye! Have a great day."
+    "help": "I can answer greetings and simple predefined questions.",
+    "bye": "Goodbye! Have a wonderful day!"
 }
 
-print("=== Rule-Based AI Chatbot ===")
-print("Type 'exit' to quit.\n")
 
-while True:
+def chatbot():
+    """Run the Rule-Based AI Chatbot."""
 
-    user_input = input("You: ")
-    user_input = user_input.lower().strip()
+    print("=" * 55)
+    print("             RULE-BASED AI CHATBOT")
+    print("=" * 55)
+    print("Supported Commands:")
+    print("• Greetings")
+    print("• Name")
+    print("• Help")
+    print("• How are you")
+    print("• Bye")
+    print("\nType 'exit' to close the chatbot.")
+    print("=" * 55)
 
-    if user_input == "exit":
-        print("AI Bot: Goodbye!")
-        break
-    else:
-        reply = responses.get(
+    while True:
+
+        user_input = input("\nYou : ").strip().lower()
+
+        if user_input == "exit":
+            print("\nAI Bot : Thank you for chatting with me.")
+            print("AI Bot : Have a wonderful day!")
+            break
+
+        response = responses.get(
             user_input,
-            "Sorry, I don't understand that command."
+            """Sorry! I couldn't understand your message.
+
+Try one of these:
+• hello
+• hi
+• help
+• name
+• how are you
+• bye
+"""
         )
-        print("AI Bot:", reply)
+
+        print("\nAI Bot :", response)
+
+
+if __name__ == "__main__":
+    chatbot()
