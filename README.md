@@ -1,91 +1,102 @@
-#Rule-Based AI Chatbot
+# 🤖 Rule-Based AI Chatbot
 
-A simple command-line Rule-Based AI Chatbot built with Python. This project demonstrates the use of dictionaries, loops, conditional statements, and user input handling to create a basic chatbot.
+A simple Rule-Based AI Chatbot developed using Python. The chatbot responds to predefined user inputs using dictionary-based pattern matching.
 
-##Features
+---
 
-* Multi-language greetings support
-* Dictionary-based response system
-* Continuous conversation using a while loop
-* Input sanitization using "lower()" and "strip()"
-* Default response for unknown commands
-* Exit command to end the chatbot
+## 📌 Features
 
-##Project Structure
-```text
-.
+- Rule-based conversation
+- Supports multiple languages
+- Predefined responses
+- User-friendly command-line interface
+- Fast response generation
+- Exit command support
+
+---
+
+## 🛠️ Technologies Used
+
+- Python 3
+
+---
+
+## 📂 Project Structure
+
+```
+Project_1_Rule_Based_Chatbot/
+│
 ├── chatbot.py
-└── README.md
+├── README.md
+├── requirements.txt
+├── .gitignore
+├── output.png
+└── LICENSE
 ```
-##Code Overview
 
-The program uses:
+---
 
-* Dictionary to store chatbot responses
-* while loop to keep the chatbot running
-* if-else statements for control flow
-* input() for user interaction
-* .get() method for response lookup and fallback handling
+## ▶️ How to Run
 
-How to Run
+1. Clone the repository
 
-1. Make sure Python is installed on your system.
-2. Clone the repository:
-```bash
-git clone https://github.com/abhinavsoni2011/decodelab-internship-project-1.git
 ```
-3. Navigate to the project folder:
+git clone <repository-link>
 ```
-cd decodelab-internship-project-1
+
+2. Open the project folder
+
+3. Run the program
+
 ```
-4. Run the program:
-```bash
 python chatbot.py
 ```
-##Example Usage
-```text
-=== Rule-Based AI Chatbot ===
-Type 'exit' to quit.
 
-You: hello
-AI Bot: Hello! How can I help you?
+---
 
-You: namaste
-AI Bot: Namaste! Aap kaise hain?
+## 💬 Sample Conversation
 
-You: hola
-AI Bot: ¡Hola! ¿Cómo estás?
-
-You: how are you
-AI Bot: I am fine. Thank you!
-
-You: xyz
-AI Bot: Sorry, I don't understand that command.
-
-You: exit
-AI Bot: Goodbye!
 ```
-##Learning Objectives
+You : hello
 
-This project helps beginners understand:
+AI Bot : Hello! How can I help you today?
 
-* Python Dictionaries
-* Loops ("while")
-* Conditional Statements ("if-else")
-* User Input Handling
-* String Manipulation
-* Basic AI Chatbot Concepts
+You : name
 
-##Future Improvements
+AI Bot : My name is RuleBot.
 
-* Add more languages and responses
-* Support multiple intents for one response
-* Store chat history
-* Add GUI using Tkinter
-* Integrate with AI APIs
+You : help
 
-##Author
+AI Bot : I can answer greetings and simple predefined questions.
 
-Abhinav Soni
-B.Tech CSE Student
-GIT Jaipur
+You : exit
+
+AI Bot : Thank you for chatting with me.
+AI Bot : Have a wonderful day!
+```
+
+---
+
+## ✨ Future Improvements
+
+- Voice input support
+- GUI version using Tkinter
+- AI-powered responses
+- Database integration
+- More supported languages
+
+---
+
+## 👨‍💻 Author
+
+**Abhinav Soni**
+
+B.Tech Computer Science & Engineering
+
+Global Institute of Technology, Jaipur (RTU)
+
+---
+
+## 📜 License
+
+This project is licensed under the MIT License.
